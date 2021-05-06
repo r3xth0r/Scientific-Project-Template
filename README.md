@@ -66,6 +66,27 @@ For additional information on project structure see:
 
 ## Conventions
 
+#### Files
+
+**Filenames**
+- File names should be meaningful and concise. Avoid excessively long filenames.
+- Avoid blanks. Use underscores (`_`) or dashes (`-`).
+- Avoid special characters
+- Start the filename with the current timestamp if feasible: `YYYY-MM-DD_filename.end`
+- If files need to be run in sequence, prefix them with (two) numbers: `01-download_data.py`  
+
+**Filetypes**
+- If possible, use geopackages instead of shapefiles
+- If you use shapefiles, put them in dedicated folders
+- Use [Arrow](https://arrow.apache.org/docs/) when seeking to access files in both R and Python.
+
+
+#### Workflow
+- If possible, use scripts as much as possible - for the sake of reproducibility and automation. This is especially true for GIS operations.
+- If files need to be run in sequence, prefix them with (two) numbers
+- Consider using tools like [drawio](https://app.diagrams.net/) for illustrating your workflows. Check in the xml file for documentation purposes.
+
+
 #### Coding style
 **Python**
 - Use [`black`](https://github.com/psf/black) as autoformatter
