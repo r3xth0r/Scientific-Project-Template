@@ -17,7 +17,7 @@ For each new project, please:
 1. add new [project group label](https://vgitlab.zamg.ac.at/groups/zamg-eo/-/labels) named `Project: {shortname}` with color `#666666`
 1. create meta-issue in [Meta](https://vgitlab.zamg.ac.at/zamg-eo/meta/-/issues) repo 
 1. setup work packages as milestones and tasks as issues
-1. setup new project on share
+1. setup new project on share - a template is available at `\\zaafs1\stabsst-erd\02_Projekte\Template`
 
 
 &nbsp;
