@@ -5,7 +5,11 @@ This is a dummy project that can be cloned as a template to maintain a standardi
 - [Checklist](#checklist-for-new-projects)
 - [Overview](#template-overview)
 - [Conventions](#conventions)
-
+    - [Files](#files)
+    - [Workflow](#workflow)
+    - [Coding style](#coding-style)
+    - [Visualization](#visualization)
+    - [Commit messages](#commit-messages)
 
 &nbsp;
 
@@ -101,7 +105,13 @@ For additional information on project structure see:
     - [VScode](https://marketplace.visualstudio.com/items?itemName=Ikuyadeu.r) w/ [radian](https://github.com/randy3k/radian)
 
 
-#### Commit message conventions
+#### Visualization
+- Use of colors: For color coding data visualizations it is crucial to choose a palette that appropriately captures the underlying information. Please refer to color palettes as provided in the [HCL Wizard](https://hclwizard.org/) and use the respective `colorspace`  packages for [R](http://colorspace.r-forge.r-project.org/) and [Python](https://python-colorspace.readthedocs.io/en/latest/).
+- Color advice for maps is available at the [Color Brewer](https://colorbrewer2.org/).
+- Check out [Question-based visualizations](https://graphicsprinciples.github.io/qbv.html) for help on visualizing the underlying scientific questions of interest clearly and explicitly.
+
+
+#### Commit messages
 - Commit messages should be clear and unambiguous.
 - Please use imperative present tense for commit messages and avoid dots at the end.
 - Please use the following prefixes for commit messages (see [Numpy developement workflow](http://docs.scipy.org/doc/numpy/dev/gitwash/development_workflow.html#writing-the-commit-message)). See the [GitLab Howto](https://vgitlab.zamg.ac.at/zamg-eo/meta/-/wikis/Setup/gitlab_howto#commit-message-conventions) on the wiki for details.
