@@ -1,8 +1,11 @@
 # Scientific project template
-This is a dummy project that can be cloned as a template to maintain a standardized project structure.
+
+This is a dummy project to be used as a template to maintain a standardized project structure.
+
 
 ## Table of Contents
 - [Checklist](#checklist-for-new-projects)
+- [How to use](#How-to-use)
 - [Overview](#template-overview)
 - [Conventions](#conventions)
     - [Files](#files)
@@ -17,11 +20,26 @@ This is a dummy project that can be cloned as a template to maintain a standardi
 ## Checklist for new projects
 
 For each new project, please:
-1. fork this repo
+1. fork/clone this repo
 1. add new [project group label](https://vgitlab.zamg.ac.at/groups/zamg-eo/-/labels) named `Project: {shortname}` with color `#666666`
 1. create meta-issue in [Meta](https://vgitlab.zamg.ac.at/zamg-eo/meta/-/issues) repo 
 1. setup work packages as milestones and tasks as issues
 1. setup new project on share - a template is available at `\\zaafs1\stabsst-erd\02_Projekte\Template`
+
+
+&nbsp;
+
+
+## How to use
+There are two alternatives to use this template as a blueprint for your own project:
+
+1. Simply [fork](https://docs.gitlab.com/ee/user/project/repository/forking_workflow.html) the repo
+2. Clone the repo and change the upstream remote:
+   ```sh
+   git clone git@vgitlab.zamg.ac.at:zamg-eo/tools/basic-project-template.git foobar
+   git remote set-url origin git@vgitlab.zamg.ac.at:zamg-eo/forschungsprojekte/foobar.git
+   ```
+   Double check with `git remote -v`, then `git push`.
 
 
 &nbsp;
