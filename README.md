@@ -60,10 +60,10 @@ Specifically, the data folder `dat` is structured as follows:
 
 ```sh
 dat
-├── external   » Data from third party sources.
 ├── interim    » Intermediate data that has been transformed.
-├── processed  » The final, canonical data sets for modeling.
-└── raw        » The original, immutable data dump.
+├── processed  » Canonical output data sets.
+├── raw        » The original, immutable data dump.
+└── reporting  » Final data sets for delivery/reporting.
 ```
 
 In addition, generic `.gitignore` and `.Rproj` files are included. 
