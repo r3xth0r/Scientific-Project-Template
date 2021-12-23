@@ -2,9 +2,7 @@
 
 This is a dummy project to be used as a template to maintain a standardized project structure.
 
-
 ## Table of Contents
-- [Checklist](#checklist-for-new-projects)
 - [How to use](#How-to-use)
 - [Overview](#template-overview)
 - [Conventions](#conventions)
@@ -13,22 +11,9 @@ This is a dummy project to be used as a template to maintain a standardized proj
     - [Coding style](#coding-style)
     - [Visualization](#visualization)
     - [Commit messages](#commit-messages)
+- [Basic git commands](#basic-git-commands)
 
 &nbsp;
-
-
-## Checklist for new projects
-
-For each new project, please:
-1. fork/clone this repo
-1. add new [project group label](https://vgitlab.zamg.ac.at/groups/zamg-eo/-/labels) named `Project: {shortname}` with color `#666666`
-1. create meta-issue in [Meta](https://vgitlab.zamg.ac.at/zamg-eo/meta/-/issues) repo 
-1. setup work packages as milestones and tasks as issues
-1. setup new project on share - a template is available at `\\zaafs1\stabsst-erd\02_Projekte\Template`
-
-
-&nbsp;
-
 
 ## How to use
 There are two alternatives to use this template as a blueprint for your own project:
@@ -36,11 +21,10 @@ There are two alternatives to use this template as a blueprint for your own proj
 1. Simply [fork](https://docs.gitlab.com/ee/user/project/repository/forking_workflow.html) the repo
 2. Clone the repo and change the upstream remote:
    ```sh
-   git clone git@vgitlab.zamg.ac.at:zamg-eo/tools/basic-project-template.git foobar
-   git remote set-url origin git@vgitlab.zamg.ac.at:zamg-eo/forschungsprojekte/foobar.git
+   git clone git@gitlab.com:Rexthor/scientific-project-template.git foobar
+   git remote set-url origin git@gitlab.com:Rexthor/scientific-project-template.git
    ```
    Double check with `git remote -v`, then `git push`.
-
 
 &nbsp;
 
@@ -69,9 +53,8 @@ dat
 In addition, generic `.gitignore` and `.Rproj` files are included. 
 
 Remarks:
-- Please maintain this structure consistently on the repo and on the share.
-- All code should be commited to the repo (`dev` could be empty on the share).
 - Please DO NOT commit large data sets (e.g. small csv files are fine), reports, plots/images, spreadsheets etc. These should reside on the share.
+- Use [pre-commit](https://pre-commit.com/) hooks if possible
 
 
 Further reading:
@@ -130,6 +113,46 @@ For additional information on project structure see:
 
 
 #### Commit messages
+
+![commit](https://imgs.xkcd.com/comics/git_commit.png)
+
 - Commit messages should be clear and unambiguous.
+- They can contain more than one line to explain the change if needed, which will not be visible in commit overviews, but in the detailed views.
 - Please use imperative present tense for commit messages and avoid dots at the end.
-- Please use the following prefixes for commit messages (see [Numpy developement workflow](http://docs.scipy.org/doc/numpy/dev/gitwash/development_workflow.html#writing-the-commit-message)). See the [GitLab Howto](https://vgitlab.zamg.ac.at/zamg-eo/meta/-/wikis/Setup/gitlab_howto#commit-message-conventions) on the wiki for details.
+- It is quite common to use short abbreviations at the beginning of commit messages declaring what type of changes the commit contains (c.f. list from [Numpy developement workflow](https://docs.scipy.org/doc/numpy-1.15.1/dev/gitwash/development_workflow.html#writing-the-commit-message)).
+- Please use the following prefixes for commit messages:
+  - `API:` an (incompatible) API change
+  - `BUG:` bug fix
+  - `DEP:` deprecate something, or remove a deprecated object
+  - `DEV:` development (tool or utility)
+  - `DOC:` documentation
+  - `MNT:` maintenance (e.g. renaming files)
+  - `REF:` code refactoring
+  - `REV:` revert an earlier commit
+  - `STY:` style changes / formatting
+  - `TST:` addition or modification of tests
+- Certain references in GitLab can be added automatically (copied from help):
+  - @foo : for team members
+  - @all : for the whole team
+  - #123 : for issues
+  - !123 : for merge requests
+  - $123 : for snippets
+  - 1234567 : for commits
+  - \[file\]\(path/to/file\) : for file references
+
+&nbsp;
+
+
+## Basic git commands
+- `git status`: list files you've changed and those you still need to add or commit
+- `git add <file>`: add <file> to staging (index)
+- `git commit -m "Commit message"`: commit changes to head
+- `git fetch`: fetch changes from remote
+- `git merge`: merge changes from remote to local (also: merge branches)
+- `git pull`: `git fetch` & `git merge` (not recommended)
+- `git push`: send changes made in local version to remote
+- `git log`: show all commits
+- `git log -p <file>`: show changes over time for a specific file
+- `git blame <file>`: who changed what and when in <file>
+- `git stash`: stash the changes in a dirty working directory away
+- `git pop`: apply stashed state on top of current working directory state
