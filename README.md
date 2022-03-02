@@ -155,4 +155,5 @@ For additional information on project structure see:
 - `git log -p <file>`: show changes over time for a specific file
 - `git blame <file>`: who changed what and when in <file>
 - `git stash`: stash the changes in a dirty working directory away
-- `git pop`: apply stashed state on top of current working directory state
+- `git stash pop`: apply stashed state on top of current working directory state
+
