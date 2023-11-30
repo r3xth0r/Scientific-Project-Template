@@ -22,7 +22,7 @@ There are two alternatives to use this template as a blueprint for your own proj
 2. Clone the repo and change the upstream remote:
    ```sh
    git clone git@gitlab.com:Rexthor/scientific-project-template.git foobar
-   git remote set-url origin git@gitlab.com:Rexthor/scientific-project-template.git
+   git remote set-url origin git@gitlab.com:{namespace}/{project}.git
    ```
    Double check with `git remote -v`, then `git push`.
 
@@ -53,6 +53,7 @@ dat
 In addition, generic `.gitignore` and `.Rproj` files are included. 
 
 Remarks:
+- Please do not commit large data sets (small csv files are fine), reports, plots/images, spreadsheets etc. These should reside on a share.
 - Use [pre-commit](https://pre-commit.com/) hooks. A sample `.pre-commit-config.yaml` is provided. Run `pre-commit install` to install/set up the hooks specified in the configuration file.
 
 
@@ -80,26 +81,28 @@ For additional information on project structure see:
 - If files need to be run in sequence, prefix them with (two) numbers: `01-download_data.py`  
 
 **Filetypes**
-- If possible, use geopackages instead of shapefiles
-- If you use shapefiles, put them in dedicated folders
+- Please use geopackages instead of shapefiles
+- If you use shapefiles, put them in dedicated folders / zip them
 - Use [Arrow](https://arrow.apache.org/docs/) when seeking to access files in both R and Python.
 
 
 #### Workflow
 - If possible, use scripts as much as possible - for the sake of reproducibility and automation. This is especially true for GIS operations.
-- If files need to be run in sequence, prefix them with (two) numbers
-- Consider using tools like [drawio](https://app.diagrams.net/) for illustrating your workflows. Check in the xml file for documentation purposes.
+- If files need to be run in sequence, prefix them with (two) numbers.
+- For automation use workflow tools like [doit](https://pydoit.org/), [snakemake](https://snakemake.readthedocs.io/en/stable/) or [targets](https://docs.ropensci.org/targets/).
+- Consider using tools like [mermaid](https://mermaid.js.org/) or [drawio](https://app.diagrams.net/) for illustrating your workflows. Check in the xml file for documentation purposes.
 
 
 #### Coding style
+
 **Python**
-- Use [`black`](https://github.com/psf/black) as autoformatter
-- Recommended editor: [VSCode](https://code.visualstudio.com/docs/python/python-tutorial)
+- Use [`black`](https://github.com/psf/black) as autoformatter.
+- Recommended editor: [VSCode](https://code.visualstudio.com/docs/python/python-tutorial).
 
 **R**
 - [tidyverse style guide](https://style.tidyverse.org/)
 - Use `tidyverse`
-- Use `sf` for vector data
+- Use `sf` for vector data and `stars` for raster data
 - Recommended editor:
     - [RStudio](https://www.rstudio.com/)
     - [VScode](https://marketplace.visualstudio.com/items?itemName=Ikuyadeu.r) w/ [radian](https://github.com/randy3k/radian)
