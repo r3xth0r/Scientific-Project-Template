@@ -53,8 +53,7 @@ dat
 In addition, generic `.gitignore` and `.Rproj` files are included. 
 
 Remarks:
-- Please DO NOT commit large data sets (e.g. small csv files are fine), reports, plots/images, spreadsheets etc. These should reside on the share.
-- Use [pre-commit](https://pre-commit.com/) hooks if possible
+- Use [pre-commit](https://pre-commit.com/) hooks. A sample `.pre-commit-config.yaml` is provided. Run `pre-commit install` to install/set up the hooks specified in the configuration file.
 
 
 Further reading:
